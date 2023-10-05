@@ -11,29 +11,31 @@ import UIKit
 
 class firstViewController: UIViewController {
     
+    var currentIndex = 0
+    
+    
     var favoriteFoodsArray : [String] = ["Pizza", "Sushi", "Burgers", "Pasta", "Watermelon"]
     
+    @IBOutlet weak var topLabel: UILabel!
     
+    
+    
+    @IBOutlet weak var bottomLabel: UILabel!
+    
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        
+        for name in favoriteFoodsArray
+        {
+            print("My favorite food is" + name)
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var currentIndex = 0
-        
-        @IBOutlet weak var topLabel: UILabel!
-        
-        
-        
-        @IBOutlet weak var bottomLabel: UILabel!
-        
-        
-        @IBAction func buttonPressed(_ sender: Any) {
-            
-            for name in favoriteFoodsArray
-            {
-                print("My favorite food is" + name)
-            }
-            
+    
         }
         
         // Do any additional setup after loading the view.
@@ -51,4 +53,4 @@ class firstViewController: UIViewController {
      */
     
     
-}
+
