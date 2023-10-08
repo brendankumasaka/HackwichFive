@@ -46,6 +46,27 @@ class ViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
+            
+            topLabel.text = "My Favorite Foods"
+            
+            func myFavoriteFoodButtonPressed(_ sender: Any ) {
+                bottomLabel.text = favoriteFoodsArray[0]
+                
+                if self.currentIndex <
+                    self.favoriteFoodsArray.count
+                {
+                    bottomLabel.text = favoriteFoodsArray[currentIndex]
+                    buttonLabel.setTitle("Next", for: UIControl.State.normal)
+                    
+                    currentIndex+=1
+                    
+                }
+                else
+                {
+                    print("Button has been disabled")
+                    (buttonLabel!).isEnabled=false
+                }
+            }
         }
         
         
