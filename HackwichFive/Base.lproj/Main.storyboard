@@ -36,6 +36,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
+                                    <action selector="buttonLabel:" destination="DsL-M6-EM4" eventType="touchUpInside" id="6vC-fN-Q9E"/>
                                     <action selector="buttonPressed:" destination="DsL-M6-EM4" eventType="touchUpInside" id="qXu-zh-RWW"/>
                                     <action selector="buttonPressed:" destination="TDU-4T-mlG" eventType="touchUpInside" id="riX-oI-bHd"/>
                                 </connections>

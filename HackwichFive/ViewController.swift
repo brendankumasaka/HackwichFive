@@ -16,12 +16,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var topLabel: UILabel!
     
-    
+    //Comment: This IBOutlet action is for the top label
     
     @IBOutlet weak var bottomLabel: UILabel!
     
+    //Comment: This IBOutlet action is for the bottom label
     
-    @IBAction func buttonPressed(_ sender: Any) {
+    func buttonLabel(_ sender: Any) {
+        
+    //Comment: This IBOutlet action is for the button label
         
         for name in favoriteFoodsArray
         {
@@ -33,8 +36,9 @@ class ViewController: UIViewController {
     var favoriteMovies : [String] = ["TopGun", "Avengers,", "JurrasicWorld", "GuardingsoftheGalaxy", "Avatar"]
     
     
-    @IBAction func otherButtonPressed(_ sender: Any) {
+    @IBAction func buttonPressed(_ sender: Any) {
         
+    //Comment: This IBAction action is for the button press for the favorite movies View Controller
         
         for name in favoriteMovies
         {
@@ -42,34 +46,38 @@ class ViewController: UIViewController {
         }
         
     }
+    
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // Do any additional setup after loading the view.
-            
-            topLabel.text = "My Favorite Foods"
-            
-            func myFavoriteFoodButtonPressed(_ sender: Any ) {
-                bottomLabel.text = favoriteFoodsArray[0]
-                
-                if self.currentIndex <
-                    self.favoriteFoodsArray.count
-                {
-                    bottomLabel.text = favoriteFoodsArray[currentIndex]
-                    buttonLabel.setTitle("Next", for: UIControl.State.normal)
-                    
-                    currentIndex+=1
-                    
-                }
-                else
-                {
-                    print("Button has been disabled")
-                    (buttonLabel!).isEnabled=false
-                }
-            }
+        func buttonLabel(_ sender: Any) {
         }
         
+        //Comment: This is for the button label
         
+        topLabel.text = "My Favorite Foods"
+        
+        func myFavoriteFoodButtonPressed(_ sender: Any ) {
+            bottomLabel.text = favoriteFoodsArray[0]
+            
+            if self.currentIndex <
+                self.favoriteFoodsArray.count
+            {
+                bottomLabel.text = favoriteFoodsArray[currentIndex]
+                buttonLabel.setTitle("Next", for: UIControl.State.normal)
+                
+                currentIndex+=1
+                
+            }
+            else
+            {
+                print("Button has been disabled")
+                (buttonLabel).isEnabled=false3
+                
+            }
+            
+        }
     }
-    
-
+}
